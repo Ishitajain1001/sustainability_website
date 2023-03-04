@@ -1,17 +1,39 @@
+// defines a function to generate random images
 function display_random_image() 
 {
      var ecoImages = [{
-        src: "http://farm4.staticflickr.com/3691/11268502654_f28f05966c_m.jpg",
-        width: "240",
-        height: "160"
-    }, {
-        src: "http://farm1.staticflickr.com/33/45336904_1aef569b30_n.jpg",
-        width: "320",
-        height: "195"
-    }, {
-        src: "http://farm6.staticflickr.com/5211/5384592886_80a512e2c9.jpg",
+        src: "https://i.pinimg.com/564x/e0/ec/36/e0ec36b247a8c739ca24da1f16d6e65e.jpg",
         width: "500",
-        height: "343"
+        height: "500",
+        
+    }, {
+        src: "https://pbs.twimg.com/media/EzTlAy9VoAEXVlZ?format=png&name=small",
+        width: "500",
+        height: "500"
+    }, {
+        src: "https://pbs.twimg.com/media/EzTJzbwVUAANgel?format=png&name=small",
+        width: "500",
+        height: "500"
+    }, {
+        src: "https://pbs.twimg.com/media/EzTjVccVgA0NJpb?format=png&name=small",
+        width: "500",
+        height: "500"
+    },{
+        src: "https://images.squarespace-cdn.com/content/v1/5eda91260bbb7e7a4bf528d8/1618851402610-0PP8LHK779R3SEQZY797/meme18.jpg?format=500w",
+        width: "500",
+        height: "500"
+    }, {
+        src: "https://media.makeameme.org/created/recycling-is-too-5c0bc5.jpg",
+        width: "500",
+        height: "500"
+    }, {
+        src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvUU1wsUWBQN8eYTdbULNuzVClp3cNn4VcDPgOg83L3-zb8jJdGh1gvzo4Ec1MgOOocoM&usqp=CAU",
+        width: "500",
+        height: "500"
+    }, {
+        src: "https://img-9gag-fun.9cache.com/photo/aV7ArXK_700bwp.webp",
+        width: "500",
+        height: "500"
     }];
     
     var preBuffer = [];
@@ -43,4 +65,27 @@ for (var p = 0; p < l; p++) {
 }
 // display the image  
 document.body.appendChild(newImage);
+}
+
+// defines a function to generate random sounds
+soundList = [ 'sound1' ]
+function randomSound() {
+    var index = Math.floor(Math.random() * 1000) % soundList.length;
+    var id = soundList[index];
+    var audioElement = document.getElementById(id);
+    audioElement.play();
+}
+
+function playRandomSound(){
+
+    //An array to house all of the URLs of your sounds
+    var sounds = [ "https://www2.cs.uic.edu/~i101/SoundFiles/BabyElephantWalk60.wav",
+                   "https://www2.cs.uic.edu/~i101/SoundFiles/CantinaBand60.wav",
+                   "https://www2.cs.uic.edu/~i101/SoundFiles/PinkPanther30.wav"];
+    
+    //This line will select a random sound to play out of your provided URLS
+    var soundFile = sounds[Math.floor(Math.random()*sounds.length)];
+    
+    //Find the player element that you created and generate an embed file to play the sound within it
+    document.getElementById("player").innerHTML="<embed src=\""+soundfile+"\" hidden=\"true\" autostart=\"true\" loop=\"false\" />";
 }

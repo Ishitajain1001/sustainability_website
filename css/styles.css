@@ -1,4 +1,9 @@
 
+body {
+  background-color: #ddead1;
+}
+
+
 nav .pages li {
   float: right;
 }
@@ -15,7 +20,7 @@ nav ul {
   margin: 0px;
   padding: 0px;
   overflow: hidden;
-  background-color: #658354;
+  background-color: #87ab69;
   box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
 }
 
