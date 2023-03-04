@@ -108,7 +108,7 @@ document.body.appendChild(newImage);
 }
 
 // defines a function to generate random sounds
-soundList = [ "sound1", "sound2", "sound3", "sound4", "sound5", "sound6", "sound7", "sound8", "sound", "sound10" ]
+soundList = [ "sound1", "sound2", "sound3", "sound4", "sound5", "sound6", "sound7", "sound8", "sound9", "sound10", "sound11", "sound12" ]
 function randomSound() {
     var audio1 = document.getElementById("sound1")
     audio1.pause()
@@ -119,27 +119,33 @@ function randomSound() {
     var audio3 = document.getElementById("sound3")
     audio3.pause()
     audio3.currentTime = 0.0
-    var audio4 = document.getElementById("sound1")
+    var audio4 = document.getElementById("sound4")
     audio4.pause()
     audio4.currentTime = 0.0
-    var audio5 = document.getElementById("sound2")
+    var audio5 = document.getElementById("sound5")
     audio5.pause()
     audio5.currentTime = 0.0
-    var audio6 = document.getElementById("sound3")
+    var audio6 = document.getElementById("sound6")
     audio6.pause()
     audio6.currentTime = 0.0
-    var audio7 = document.getElementById("sound1")
+    var audio7 = document.getElementById("sound7")
     audio7.pause()
     audio7.currentTime = 0.0
-    var audio8 = document.getElementById("sound2")
+    var audio8 = document.getElementById("sound8")
     audio8.pause()
     audio8.currentTime = 0.0
-    var audio9 = document.getElementById("sound3")
+    var audio9 = document.getElementById("sound9")
     audio9.pause()
     audio9.currentTime = 0.0
-    var audio10 = document.getElementById("sound1")
+    var audio10 = document.getElementById("sound10")
     audio10.pause()
     audio10.currentTime = 0.0
+    var audio11 = document.getElementById("sound11")
+    audio11.pause()
+    audio11.currentTime = 0.0
+    var audio12 = document.getElementById("sound12")
+    audio12.pause()
+    audio12.currentTime = 0.0
 
     var index = Math.floor(Math.random() * 1000) % soundList.length;
     var id = soundList[index];
